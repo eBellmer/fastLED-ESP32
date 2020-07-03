@@ -25,13 +25,13 @@ FASTLED_USING_NAMESPACE
 // #define NUM_LEDS    175 // Second strip of LEDs
 // #define NUM_LEDS    135 // Third strip of LEDs
 // #define NUM_LEDS    172 // Fourth strip of LEDs
-//#define NUM_LEDS    607 // All LEDs
-#define NUM_LEDS    150 // Test LED strip 17
+//#define NUM_LEDS    607 // All LEDsdo
+#define NUM_LEDS    434 // Test LED strip 17
 
 CRGB leds[NUM_LEDS];
 
 #define BRIGHTNESS          255
-#define FRAMES_PER_SECOND  120
+#define FRAMES_PER_SECOND   120
 
 
 void nextPattern();
@@ -48,7 +48,6 @@ void setup() {
   
   // tell FastLED about the LED strip configuration
   FastLED.addLeds<LED_TYPE,DATA_PIN,COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
-  //FastLED.addLeds<LED_TYPE,DATA_PIN,CLK_PIN,COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
 
   // set master brightness control
   FastLED.setBrightness(BRIGHTNESS);
@@ -59,7 +58,7 @@ void setup() {
 typedef void (*SimplePatternList[])();
 // SimplePatternList gPatterns = { rainbow, rainbowWithGlitter, confetti, sinelon, juggle, bpm };
 //SimplePatternList gPatterns = {rainbow, sinelon, juggle};
-SimplePatternList gPatterns = {rainbow, sinelon};
+SimplePatternList gPatterns = { rainbow };
 
 uint8_t gCurrentPatternNumber = 0; // Index number of which pattern is current
 uint8_t gHue = 0; // rotating "base color" used by many of the patterns
