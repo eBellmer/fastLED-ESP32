@@ -1,0 +1,2 @@
+const char* SSID = ""; // WiFi SSID
+const char* WIFI_PWD = ""; // WiFi password
