@@ -18,15 +18,9 @@ FASTLED_USING_NAMESPACE
 #endif
 
 #define DATA_PIN    15
-//#define CLK_PIN   4
 #define LED_TYPE    WS2811
 #define COLOR_ORDER GRB
-// #define NUM_LEDS    124 // First strip of LEDs
-// #define NUM_LEDS    175 // Second strip of LEDs
-// #define NUM_LEDS    135 // Third strip of LEDs
-// #define NUM_LEDS    172 // Fourth strip of LEDs
-//#define NUM_LEDS    607 // All LEDsdo
-#define NUM_LEDS    434 // Test LED strip 17
+#define NUM_LEDS    606
 
 CRGB leds[NUM_LEDS];
 
@@ -57,7 +51,6 @@ void setup() {
 // List of patterns to cycle through.  Each is defined as a separate function below.
 typedef void (*SimplePatternList[])();
 // SimplePatternList gPatterns = { rainbow, rainbowWithGlitter, confetti, sinelon, juggle, bpm };
-//SimplePatternList gPatterns = {rainbow, sinelon, juggle};
 SimplePatternList gPatterns = { rainbow };
 
 uint8_t gCurrentPatternNumber = 0; // Index number of which pattern is current
