@@ -20,12 +20,14 @@
 #ifdef DEBUG	// Test LED strip only has 21 LEDs so use that value for testing & debug.
 	#define NUM_LEDS		21
 	#define DEVICE_NAME		"Test Light"
+	#define DATA_PIN		27
 #else
-	#define NUM_LEDS		606
+	#define NUM_LEDS		807
 	#define DEVICE_NAME		"Ring Light"
+	#define DATA_PIN		27
 #endif
 
-#define DATA_PIN			15
+
 #define LED_TYPE			WS2811
 #define COLOR_ORDER			GRB
 #define FRAMES_PER_SECOND	120
